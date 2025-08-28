@@ -22,3 +22,6 @@ costo_conexion(Ciudad1,Ciudad2,Costototal):-
     tiene_una_conexion(C,Ciudad2,B),
     Costototal is A+B.
 
+es_posible_ir_de_a(X,Y) :-
+    esta_conectado(X,Z,_),
+    esta_conectado(Z,Y,_).
