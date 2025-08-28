@@ -11,8 +11,8 @@ esta_conectado(regina, saskatoon,7).
 verificar_conexion(X,Y) :- 
     esta_conectado(X,Y,_).
 
-esta_conectado_con(X,Y,Z) :-
-    esta_conectado(X,Y,Z).
+esta_conectado_con(X,Ciudades,Costo) :-
+    esta_conectado(X,Ciudades,Costo).
 
 tiene_aristas(X) :-
     esta_conectado(X,_,_).
