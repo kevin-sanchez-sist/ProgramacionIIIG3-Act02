@@ -16,3 +16,9 @@ esta_conectado_con(X,Ciudades,Costo) :-
 
 tiene_aristas(X) :-
     esta_conectado(X,_,_).
+
+costo_conexion(Ciudad1,Ciudad2,Costototal):-
+    tiene_una_conexion(Ciudad1,C,A),
+    tiene_una_conexion(C,Ciudad2,B),
+    Costototal is A+B.
+
