@@ -25,3 +25,9 @@ costo_conexion(Ciudad1,Ciudad2,Costototal):-
 es_posible_ir_de_a(X,Y) :-
     esta_conectado(X,Z,_),
     esta_conectado(Z,Y,_).
+
+existe_camino_entre(X,Y,Costo) :- esta_conectado(X,Y,Costo).
+existe_camino_entre(X,Y,Costo) :- 
+    esta_conectado(X,Z,C1),
+    existe_camino_entre(Z,Y,C2),
+    Costo is C1 + C2.
